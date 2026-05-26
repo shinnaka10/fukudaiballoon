@@ -533,16 +533,8 @@ section { padding: 96px 0; }
   margin: 0 auto 64px;
 }
 
-.benefits-title {
-  font-size: 1.3rem;
-  font-weight: 800;
-  text-align: center;
-  margin-bottom: 32px;
-  color: var(--sky-mid);
-}
-
 /* Benefits grid */
-.sponsor-benefits { margin-bottom: 72px; }
+.sponsor-benefits { margin-bottom: 56px; }
 
 .benefits-grid {
   display: grid;
@@ -579,117 +571,22 @@ section { padding: 96px 0; }
   line-height: 1.8;
 }
 
-/* Tiers */
-.sponsor-tiers { }
-
-.tiers-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 24px;
-  margin-bottom: 20px;
-  align-items: start;
-}
-
-.tier-card {
-  border-radius: var(--radius);
-  padding: 36px 28px;
+/* CTA */
+.sponsor-cta {
   text-align: center;
-  box-shadow: var(--shadow);
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-  transition: transform 0.25s;
+  padding: 48px 0 0;
 }
-.tier-card:hover { transform: translateY(-6px); }
 
-.tier-bronze {
-  background: #fdf6ee;
-  border: 2px solid #c8924a;
-}
-.tier-silver {
-  background: #f4f6f9;
-  border: 2px solid #8fa0b8;
-}
-.tier-gold {
-  background: linear-gradient(135deg, #fffbe6, #fff3c0);
-  border: 2px solid #f5a623;
-  transform: scale(1.03);
-  box-shadow: 0 12px 40px rgba(245,166,35,0.25);
-}
-.tier-gold:hover { transform: scale(1.03) translateY(-6px); }
-
-.tier-badge {
-  display: inline-block;
-  padding: 4px 16px;
-  border-radius: 50px;
-  font-size: 0.78rem;
-  font-weight: 800;
-  letter-spacing: 0.15em;
-  text-transform: uppercase;
-}
-.tier-bronze .tier-badge { background: #c8924a; color: white; }
-.tier-silver .tier-badge { background: #8fa0b8; color: white; }
-.tier-gold   .tier-badge { background: #f5a623; color: white; }
-
-.tier-price {
-  font-size: 1.9rem;
-  font-weight: 900;
-  color: var(--text);
-}
-.tier-price span {
-  font-size: 0.9rem;
-  font-weight: 400;
+.sponsor-cta-text {
+  font-size: 1rem;
   color: var(--text-light);
+  line-height: 1.9;
+  margin-bottom: 28px;
 }
 
-.tier-perks {
-  list-style: none;
-  text-align: left;
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-.tier-perks li {
-  font-size: 0.9rem;
-  color: var(--text-light);
-  padding-left: 20px;
-  position: relative;
-  line-height: 1.5;
-}
-.tier-perks li::before {
-  content: '✓';
-  position: absolute;
-  left: 0;
-  color: var(--sky-mid);
-  font-weight: 700;
-}
-.tier-gold .tier-perks li::before { color: #d4900a; }
-
-.btn-tier {
-  display: block;
-  padding: 12px 24px;
-  border-radius: 50px;
-  font-size: 0.92rem;
-  font-weight: 700;
-  text-decoration: none;
-  text-align: center;
-  background: var(--sky-mid);
-  color: white;
-  transition: background 0.2s, transform 0.2s;
-}
-.btn-tier:hover { background: #145d8c; transform: translateY(-2px); }
-
-.btn-tier-gold {
-  background: var(--accent);
-  color: #1a1a2e;
-}
-.btn-tier-gold:hover { background: #d4900a; }
-
-.tier-note {
-  text-align: center;
-  font-size: 0.82rem;
-  color: var(--text-light);
-  margin-top: 8px;
+.btn-large {
+  padding: 18px 48px;
+  font-size: 1.05rem;
 }
 
 /* ========================
