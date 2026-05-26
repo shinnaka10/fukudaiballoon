@@ -750,7 +750,8 @@ section { padding: 96px 0; }
   box-shadow: 0 16px 48px rgba(0,0,0,0.13);
 }
 
-.benefit-icon { font-size: 2.4rem; margin-bottom: 14px; }
+.benefit-icon { width: 48px; height: 48px; margin: 0 auto 16px; }
+.benefit-icon svg { width: 100%; height: 100%; }
 
 .benefit-item h4 {
   font-size: 1rem;
