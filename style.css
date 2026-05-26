@@ -330,6 +330,16 @@ body {
   text-shadow: 0 1px 8px rgba(0,0,0,0.3);
 }
 
+.hero-goal {
+  font-size: 0.95rem;
+  color: rgba(255,255,255,0.75);
+  margin-bottom: 32px;
+  line-height: 1.9;
+  border-left: 3px solid var(--accent);
+  padding-left: 16px;
+  text-align: left;
+}
+
 .hero-buttons {
   display: flex;
   gap: 16px;
@@ -436,6 +446,19 @@ section { padding: 96px 0; }
    About Section
    ======================== */
 .about { background: var(--white); }
+
+.about-goal {
+  text-align: center;
+  font-size: 1rem;
+  color: var(--text-light);
+  line-height: 2;
+  max-width: 680px;
+  margin: -24px auto 48px;
+  padding: 24px 32px;
+  background: #f0f5ff;
+  border-radius: var(--radius);
+  border-left: 4px solid var(--accent);
+}
 
 .about-grid {
   display: grid;
