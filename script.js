@@ -18,13 +18,14 @@ navLinks.querySelectorAll('a').forEach(a => {
   });
 });
 
-// Scroll-in animation for activity items
-const observer = new IntersectionObserver((entries) => {
+// Scroll-triggered fade-in
+const fadeObserver = new IntersectionObserver((entries) => {
   entries.forEach(entry => {
     if (entry.isIntersecting) {
       entry.target.classList.add('visible');
+      fadeObserver.unobserve(entry.target);
     }
   });
-}, { threshold: 0.15 });
+}, { threshold: 0.1 });
 
-document.querySelectorAll('.activity-item').forEach(el => observer.observe(el));
+document.querySelectorAll('.fade-in').forEach(el => fadeObserver.observe(el));

@@ -6,6 +6,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>福岡大学熱気球サークル｜佐賀インターナショナルバルーンフェスタ出場を目指す学生チーム</title>
   <meta name="description" content="福岡大学の学生50名以上が所属する熱気球サークル。佐賀を拠点に活動し、佐賀インターナショナルバルーンフェスタへの出場を目標に日々訓練中。スポンサー企業募集中。" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300&family=Noto+Sans+JP:wght@300;400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
@@ -14,115 +17,69 @@
   <nav class="navbar" id="navbar">
     <div class="nav-inner">
       <a href="#" class="nav-logo">
-        <span class="logo-icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" width="24" height="24">
-            <ellipse cx="12" cy="10" rx="6" ry="7"/><path d="M9 17l1 2.5h4l1-2.5"/><path d="M9 19.5h6"/>
-            <line x1="9.5" y1="10" x2="14.5" y2="10"/><line x1="9" y1="7.5" x2="15" y2="7.5"/><line x1="9" y1="12.5" x2="15" y2="12.5"/>
-          </svg>
-        </span>
-        <span class="logo-text">福大熱気球サークル</span>
+        <span class="logo-en">FUKUDAI BALLOON</span>
+        <span class="logo-ja">福岡大学熱気球サークル</span>
       </a>
       <button class="hamburger" id="hamburger" aria-label="メニューを開く">
         <span></span><span></span><span></span>
       </button>
       <ul class="nav-links" id="nav-links">
-        <li><a href="#about">サークルについて</a></li>
-        <li><a href="#activities">活動内容</a></li>
-        <li><a href="#balloon">私たちの気球</a></li>
-        <li><a href="#sponsor">スポンサー募集</a></li>
-        <li><a href="#contact">お問い合わせ</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#activities">Activities</a></li>
+        <li><a href="#balloon">Our Balloon</a></li>
+        <li><a href="#sponsor">Sponsor</a></li>
+        <li><a href="#contact">Contact</a></li>
       </ul>
     </div>
   </nav>
 
   <!-- Hero Section -->
   <section class="hero" id="hero">
-    <div class="sky">
-      <div class="cloud cloud-1"></div>
-      <div class="cloud cloud-2"></div>
-      <div class="cloud cloud-3"></div>
-      <div class="cloud cloud-4"></div>
-
-      <div class="balloon balloon-1">
-        <div class="balloon-body">
-          <div class="stripe s1"></div><div class="stripe s2"></div>
-          <div class="stripe s3"></div><div class="stripe s4"></div>
-        </div>
-        <div class="balloon-neck"></div>
-        <div class="balloon-basket"></div>
-        <div class="rope rope-l"></div>
-        <div class="rope rope-r"></div>
-      </div>
-
-      <div class="balloon balloon-2">
-        <div class="balloon-body alt">
-          <div class="stripe s1"></div><div class="stripe s2"></div>
-          <div class="stripe s3"></div><div class="stripe s4"></div>
-        </div>
-        <div class="balloon-neck"></div>
-        <div class="balloon-basket"></div>
-        <div class="rope rope-l"></div>
-        <div class="rope rope-r"></div>
-      </div>
-
-      <div class="balloon balloon-3">
-        <div class="balloon-body tri">
-          <div class="stripe s1"></div><div class="stripe s2"></div>
-          <div class="stripe s3"></div><div class="stripe s4"></div>
-        </div>
-        <div class="balloon-neck"></div>
-        <div class="balloon-basket"></div>
-        <div class="rope rope-l"></div>
-        <div class="rope rope-r"></div>
-      </div>
-    </div>
-
+    <div class="hero-bg"></div>
+    <div class="hero-overlay"></div>
     <div class="hero-content">
       <p class="hero-sub">Fukuoka University Hot Air Balloon Club</p>
-      <h1 class="hero-title">
-        空を、自由に。<br />熱気球と共に。
-      </h1>
+      <h1 class="hero-title">空へ挑む、<br />大学生の情熱。</h1>
+      <div class="hero-divider"></div>
       <p class="hero-desc">
-        福岡大学熱気球サークルへようこそ。<br />
-        青い空の上で、最高の仲間と感動の体験を。
-      </p>
-      <p class="hero-goal">
-        目標は佐賀インターナショナルバルーンフェスタへの出場。<br />
-        アジア最大級の国際大会の空に、私たちの気球を飛ばす。
+        佐賀インターナショナルバルーンフェスタへの出場を目指して。<br />
+        部員50名以上が、アジア最大級の舞台に挑む。
       </p>
       <div class="hero-buttons">
-        <a href="#sponsor" class="btn btn-primary">スポンサーになる</a>
-        <a href="#about" class="btn btn-outline">サークルを知る</a>
+        <a href="#sponsor" class="btn btn-gold">スポンサーになる</a>
+        <a href="#about" class="btn btn-ghost">サークルを知る</a>
       </div>
     </div>
-
     <div class="hero-scroll">
-      <span>スクロール</span>
-      <div class="scroll-arrow"></div>
+      <span>Scroll</span>
+      <div class="scroll-line"></div>
     </div>
   </section>
 
   <!-- About Section -->
   <section class="about" id="about">
     <div class="container">
-      <h2 class="section-title">サークルについて</h2>
-      <p class="section-sub">About Us</p>
+      <div class="section-header fade-in">
+        <p class="section-label">About Us</p>
+        <h2 class="section-title">サークルについて</h2>
+        <div class="gold-line"></div>
+      </div>
 
-      <div class="about-goal">
+      <div class="about-goal fade-in">
         <div class="about-goal-icon">
           <svg viewBox="0 0 24 24" fill="none" stroke="#c8a84b" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
             <circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/>
           </svg>
         </div>
         <div class="about-goal-text">
-          <strong>サークル最大の目標</strong>は、毎年秋に佐賀で開催されるアジア最大級の国際熱気球大会<br />
-          「佐賀インターナショナルバルーンフェスタ」への出場。<br />
+          <strong>サークル最大の目標</strong>は、毎年秋に佐賀で開催されるアジア最大級の国際熱気球大会
+          「佐賀インターナショナルバルーンフェスタ」への出場。
           その夢を実現するために、スポンサー企業の皆さまのご支援を必要としています。
         </div>
       </div>
 
       <div class="stats-grid">
-        <div class="stat-card">
+        <div class="stat-card fade-in">
           <div class="stat-icon">
             <svg viewBox="0 0 24 24" fill="none" stroke="#c8a84b" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
               <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
@@ -132,23 +89,22 @@
             </svg>
           </div>
           <div class="stat-value">50<span>名以上</span></div>
-          <div class="stat-label">部員数</div>
+          <div class="stat-label">Members</div>
         </div>
-        <div class="stat-card">
+        <div class="stat-card fade-in">
           <div class="stat-icon">
             <svg viewBox="0 0 24 24" fill="none" stroke="#c8a84b" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
               <ellipse cx="12" cy="9" rx="7" ry="8"/>
-              <path d="M9 17l1 3h4l1-3"/>
-              <path d="M9 20h6"/>
+              <path d="M9 17l1 3h4l1-3"/><path d="M9 20h6"/>
               <line x1="8" y1="9" x2="16" y2="9"/>
               <line x1="7" y1="6" x2="17" y2="6"/>
               <line x1="7" y1="12" x2="17" y2="12"/>
             </svg>
           </div>
           <div class="stat-value">２<span>機</span></div>
-          <div class="stat-label">所有気球</div>
+          <div class="stat-label">Balloons</div>
         </div>
-        <div class="stat-card">
+        <div class="stat-card fade-in">
           <div class="stat-icon">
             <svg viewBox="0 0 24 24" fill="none" stroke="#c8a84b" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
               <path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0 1 18 0z"/>
@@ -156,9 +112,9 @@
             </svg>
           </div>
           <div class="stat-value">佐賀</div>
-          <div class="stat-label">活動拠点</div>
+          <div class="stat-label">Base</div>
         </div>
-        <div class="stat-card">
+        <div class="stat-card fade-in">
           <div class="stat-icon">
             <svg viewBox="0 0 24 24" fill="none" stroke="#c8a84b" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
               <path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"/>
@@ -170,7 +126,7 @@
             </svg>
           </div>
           <div class="stat-value stat-value--small">佐賀インターナショナル<br />バルーンフェスタ</div>
-          <div class="stat-label">目標大会</div>
+          <div class="stat-label">Target</div>
         </div>
       </div>
     </div>
@@ -179,31 +135,34 @@
   <!-- Activities Section -->
   <section class="activities" id="activities">
     <div class="container">
-      <h2 class="section-title">活動内容</h2>
-      <p class="section-sub">Activities</p>
+      <div class="section-header fade-in">
+        <p class="section-label">Activities</p>
+        <h2 class="section-title">活動内容</h2>
+        <div class="gold-line"></div>
+      </div>
       <div class="activity-list">
-        <div class="activity-item">
+        <div class="activity-item fade-in">
           <div class="activity-num">01</div>
           <div class="activity-body">
             <h3>飛行訓練</h3>
             <p>福岡大学から佐賀のフライトエリアまで約1時間。早朝の風が安定した時間帯に定期的に飛行訓練を実施しています。熱気球の操縦には気象の読み方・バーナー操作・風向きの判断など高度な技術が必要で、部員50名以上が役割分担しながら安全第一で訓練に取り組んでいます。</p>
           </div>
         </div>
-        <div class="activity-item">
+        <div class="activity-item fade-in">
           <div class="activity-num">02</div>
           <div class="activity-body">
             <h3>競技大会・遠征</h3>
             <p>全日本学生選手権への出場を目指すほか、夏には北海道上士幌町で開催される「北海道バルーンフェスティバル」への遠征も実施。福岡を飛び出し、全国の仲間・ライバルと交流しながらレベルアップを図っています。</p>
           </div>
         </div>
-        <div class="activity-item">
+        <div class="activity-item fade-in">
           <div class="activity-num">03</div>
           <div class="activity-body">
             <h3>イベント・地域貢献</h3>
             <p>地域イベントでの係留飛行体験を実施。巨大な熱気球を間近で見て・触れてもらうことで、熱気球の魅力を地域に広めています。スポンサー企業のロゴを掲げた気球は、イベントのたびに多くの人の目に触れる「空飛ぶ広告塔」になります。</p>
           </div>
         </div>
-        <div class="activity-item">
+        <div class="activity-item fade-in">
           <div class="activity-num">04</div>
           <div class="activity-body">
             <h3>整備・機材管理</h3>
@@ -217,9 +176,12 @@
   <!-- Our Balloon Section -->
   <section class="our-balloon" id="balloon">
     <div class="container">
-      <h2 class="section-title">私たちの気球</h2>
-      <p class="section-sub">Our Balloon</p>
-      <div class="balloon-showcase">
+      <div class="section-header fade-in">
+        <p class="section-label">Our Balloon</p>
+        <h2 class="section-title">私たちの気球</h2>
+        <div class="gold-line"></div>
+      </div>
+      <div class="balloon-showcase fade-in">
         <div class="balloon-photo">
           <img src="images/balloon.jpg" alt="佐賀平野のトキメキ（JA-A 1301）" />
         </div>
@@ -231,38 +193,14 @@
             緑・黄・白・ブルーのカラーリングをまとった機体は、空でもひときわ目を引きます。
           </p>
           <dl class="balloon-specs">
-            <div class="spec-row">
-              <dt>登録番号</dt>
-              <dd>JA-A 1301</dd>
-            </div>
-            <div class="spec-row">
-              <dt>メーカー</dt>
-              <dd>Inom Balloons（イノム・バルーン）</dd>
-            </div>
-            <div class="spec-row">
-              <dt>型式</dt>
-              <dd>INOM 716-69NS</dd>
-            </div>
-            <div class="spec-row">
-              <dt>製造番号</dt>
-              <dd>A08-5</dd>
-            </div>
-            <div class="spec-row">
-              <dt>製造年</dt>
-              <dd>2008年7月26日</dd>
-            </div>
-            <div class="spec-row">
-              <dt>容積</dt>
-              <dd>1,950㎥（AX-7クラス）</dd>
-            </div>
-            <div class="spec-row">
-              <dt>重量</dt>
-              <dd>93.5 kg</dd>
-            </div>
-            <div class="spec-row">
-              <dt>カラー</dt>
-              <dd>緑・黄・白・ライトブルー・ブルー</dd>
-            </div>
+            <div class="spec-row"><dt>登録番号</dt><dd>JA-A 1301</dd></div>
+            <div class="spec-row"><dt>メーカー</dt><dd>Inom Balloons（イノム・バルーン）</dd></div>
+            <div class="spec-row"><dt>型式</dt><dd>INOM 716-69NS</dd></div>
+            <div class="spec-row"><dt>製造番号</dt><dd>A08-5</dd></div>
+            <div class="spec-row"><dt>製造年</dt><dd>2008年7月26日</dd></div>
+            <div class="spec-row"><dt>容積</dt><dd>1,950㎥（AX-7クラス）</dd></div>
+            <div class="spec-row"><dt>重量</dt><dd>93.5 kg</dd></div>
+            <div class="spec-row"><dt>カラー</dt><dd>緑・黄・白・ライトブルー・ブルー</dd></div>
           </dl>
         </div>
       </div>
@@ -272,31 +210,34 @@
   <!-- Sponsor Section -->
   <section class="sponsor" id="sponsor">
     <div class="container">
-      <h2 class="section-title">スポンサー募集</h2>
-      <p class="section-sub">Become a Sponsor</p>
+      <div class="section-header fade-in">
+        <p class="section-label">Become a Sponsor</p>
+        <h2 class="section-title">スポンサー募集</h2>
+        <div class="gold-line"></div>
+      </div>
 
-      <p class="sponsor-lead">
+      <p class="sponsor-lead fade-in">
         私たちの目標は、佐賀インターナショナルバルーンフェスタへの出場です。<br />
-        機体の購入・維持費・大会参加費のご支援が、その夢への第一歩になります。<br /><br />
-        熱気球の運営には、機体の維持費・大会参加費・燃料費など多くのコストがかかります。<br />
-        私たちの挑戦を支えていただける企業・団体様を募集しています。<br />
-        条件はすべてご相談ください。
+        機体の購入・維持費・大会参加費のご支援が、その夢への第一歩になります。<br />
+        私たちの挑戦を支えていただける企業・団体様を募集しています。条件はすべてご相談ください。
       </p>
 
-      <!-- Benefits -->
       <div class="sponsor-benefits">
         <div class="benefits-grid">
-          <div class="benefit-item">
+          <div class="benefit-item fade-in">
             <div class="benefit-icon">
               <svg viewBox="0 0 24 24" fill="none" stroke="#c8a84b" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                <ellipse cx="12" cy="9" rx="7" ry="8"/><path d="M9 17l1 3h4l1-3"/><path d="M9 20h6"/>
-                <line x1="8" y1="9" x2="16" y2="9"/><line x1="7" y1="6" x2="17" y2="6"/><line x1="7" y1="12" x2="17" y2="12"/>
+                <ellipse cx="12" cy="9" rx="7" ry="8"/>
+                <path d="M9 17l1 3h4l1-3"/><path d="M9 20h6"/>
+                <line x1="8" y1="9" x2="16" y2="9"/>
+                <line x1="7" y1="6" x2="17" y2="6"/>
+                <line x1="7" y1="12" x2="17" y2="12"/>
               </svg>
             </div>
             <h4>機体への大型ロゴ掲載</h4>
             <p>競技・イベントで空高く舞う熱気球の機体に、貴社ロゴを大きく掲載。大会・メディアを通じて多くの方の目に届きます。</p>
           </div>
-          <div class="benefit-item">
+          <div class="benefit-item fade-in">
             <div class="benefit-icon">
               <svg viewBox="0 0 24 24" fill="none" stroke="#c8a84b" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
                 <circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/>
@@ -306,22 +247,24 @@
             <h4>ホームページ・SNSへの掲載</h4>
             <p>公式サイトおよびSNS（Instagram・X）にスポンサーとしてご紹介します。</p>
           </div>
-          <div class="benefit-item">
+          <div class="benefit-item fade-in">
             <div class="benefit-icon">
               <svg viewBox="0 0 24 24" fill="none" stroke="#c8a84b" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
                 <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/>
-                <path d="M15.54 8.46a5 5 0 0 1 0 7.07"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/>
+                <path d="M15.54 8.46a5 5 0 0 1 0 7.07"/>
+                <path d="M19.07 4.93a10 10 0 0 1 0 14.14"/>
               </svg>
             </div>
             <h4>イベント・大会での告知</h4>
             <p>学祭・地域イベント・競技大会での横断幕・告知物に貴社名を掲載します。</p>
           </div>
-          <div class="benefit-item">
+          <div class="benefit-item fade-in">
             <div class="benefit-icon">
               <svg viewBox="0 0 24 24" fill="none" stroke="#c8a84b" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
                 <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
                 <circle cx="9" cy="7" r="4"/>
-                <path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+                <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+                <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
               </svg>
             </div>
             <h4>学生との交流機会</h4>
@@ -330,9 +273,9 @@
         </div>
       </div>
 
-      <div class="sponsor-cta">
+      <div class="sponsor-cta fade-in">
         <p class="sponsor-cta-text">詳細・条件はすべてお問い合わせください。<br />お気軽にご連絡いただけますと幸いです。</p>
-        <a href="#contact" class="btn btn-primary btn-large">スポンサーについて問い合わせる</a>
+        <a href="#contact" class="btn btn-gold">スポンサーについて問い合わせる</a>
       </div>
     </div>
   </section>
@@ -340,25 +283,36 @@
   <!-- Contact Section -->
   <section class="contact" id="contact">
     <div class="container">
-      <h2 class="section-title">お問い合わせ</h2>
-      <p class="section-sub">Contact</p>
-      <p class="contact-desc">
+      <div class="section-header fade-in">
+        <p class="section-label">Contact</p>
+        <h2 class="section-title">お問い合わせ</h2>
+        <div class="gold-line"></div>
+      </div>
+      <p class="contact-desc fade-in">
         スポンサーに関するご相談・ご質問は、お気軽にご連絡ください。<br />
         まずはメールまたはSNSのDMでご連絡いただけますと幸いです。
       </p>
-      <div class="contact-links">
-        <a href="mailto:fukuokaballoon1101@gmail.com" class="contact-btn email">
-          <span class="contact-icon">✉️</span> メールで問い合わせる
+      <div class="contact-links fade-in">
+        <a href="mailto:fukuokaballoon1101@gmail.com" class="contact-btn">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" width="16" height="16">
+            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+            <polyline points="22,6 12,13 2,6"/>
+          </svg>
+          メールで問い合わせる
         </a>
-        <a href="https://twitter.com/fukudai_balloon" class="contact-btn twitter" target="_blank" rel="noopener">
-          <span class="contact-icon">𝕏</span> Twitter / X
+        <a href="https://twitter.com/fukudai_balloon" class="contact-btn" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" width="16" height="16">
+            <path d="M4 4l16 16M4 20L20 4"/>
+          </svg>
+          Twitter / X
         </a>
-        <a href="https://instagram.com/fukudai_balloon" class="contact-btn instagram" target="_blank" rel="noopener">
-          <span class="contact-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" width="18" height="18">
-              <rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/>
-            </svg>
-          </span> Instagram
+        <a href="https://instagram.com/fukudai_balloon" class="contact-btn" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" width="16" height="16">
+            <rect x="2" y="2" width="20" height="20" rx="5"/>
+            <circle cx="12" cy="12" r="4"/>
+            <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/>
+          </svg>
+          Instagram
         </a>
       </div>
     </div>
@@ -366,7 +320,9 @@
 
   <!-- Footer -->
   <footer class="footer">
-    <p>© 2026 福岡大学熱気球サークル. All rights reserved.</p>
+    <div class="footer-logo">FUKUDAI BALLOON</div>
+    <p class="footer-tagline">佐賀インターナショナルバルーンフェスタへの挑戦</p>
+    <p class="footer-copy">© 2026 福岡大学熱気球サークル. All rights reserved.</p>
   </footer>
 
   <script src="script.js"></script>
