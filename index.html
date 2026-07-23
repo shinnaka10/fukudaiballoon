@@ -512,28 +512,21 @@
 
   <script src="script.js"></script>
   <script>
-    // Load notice from localStorage
-    (function () {
-      const notice = localStorage.getItem('fdb_notice');
-      if (notice && notice.trim()) {
-        const bar  = document.getElementById('notice-bar');
-        const text = document.getElementById('notice-text');
-        text.innerHTML = notice.replace(/\n/g, '<br>');
-        bar.style.display = 'flex';
-      }
-    })();
+    function applyNotice(notices) {
+      if (!notices || !notices.length) return;
+      const n    = notices[0];
+      const bar  = document.getElementById('notice-bar');
+      const text = document.getElementById('notice-text');
+      const label = n.date ? `【${n.date}】${n.title}　${n.content}` : `${n.title}　${n.content}`;
+      text.innerHTML = label.replace(/\n/g, '<br>');
+      bar.style.display = 'flex';
+    }
 
-    // Load gallery from localStorage
-    (function () {
-      let items;
-      try { items = JSON.parse(localStorage.getItem('fdb_gallery') || '[]'); }
-      catch { items = []; }
-      if (items.length === 0) return;
-
+    function applyGallery(items) {
+      if (!items || !items.length) return;
       const section = document.getElementById('gallery');
       const grid    = document.getElementById('gallery-grid');
       section.style.display = 'block';
-
       grid.innerHTML = items.map(item => `
         <div class="gallery-cell">
           <img src="${item.url.replace(/"/g,'')}"
@@ -542,7 +535,26 @@
           ${item.caption ? `<p class="gallery-caption">${item.caption.replace(/</g,'&lt;')}</p>` : ''}
         </div>
       `).join('');
-    })();
+    }
+
+    // Primary: data/content.json (updated by GitHub Actions from Google Sheets)
+    fetch('data/content.json?v=' + Date.now())
+      .then(r => r.ok ? r.json() : Promise.reject())
+      .then(data => {
+        applyNotice(data.notices);
+        applyGallery(data.gallery);
+      })
+      .catch(() => {
+        // Fallback: localStorage (admin.html)
+        const notice = localStorage.getItem('fdb_notice');
+        if (notice && notice.trim()) {
+          applyNotice([{ date: '', title: notice, content: '' }]);
+        }
+        let items;
+        try { items = JSON.parse(localStorage.getItem('fdb_gallery') || '[]'); }
+        catch { items = []; }
+        applyGallery(items);
+      });
   </script>
 </body>
 </html>
