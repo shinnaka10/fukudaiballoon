@@ -33,6 +33,16 @@
     </div>
   </nav>
 
+  <!-- Notice Bar (shown only when set via admin) -->
+  <div class="notice-bar" id="notice-bar" style="display:none">
+    <span class="notice-icon">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" width="14" height="14">
+        <circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/>
+      </svg>
+    </span>
+    <span id="notice-text"></span>
+  </div>
+
   <!-- Hero Section -->
   <section class="hero" id="hero">
     <div class="hero-bg"></div>
@@ -230,6 +240,18 @@
     </div>
   </section>
 
+  <!-- Gallery Section (shown only when images set via admin) -->
+  <section class="gallery" id="gallery" style="display:none">
+    <div class="container">
+      <div class="section-header fade-in">
+        <p class="section-label">Gallery</p>
+        <h2 class="section-title">ギャラリー</h2>
+        <div class="gold-line"></div>
+      </div>
+      <div class="gallery-grid" id="gallery-grid"></div>
+    </div>
+  </section>
+
   <!-- Sponsor Section -->
   <section class="sponsor" id="sponsor">
     <div class="container">
@@ -379,8 +401,42 @@
     <div class="footer-logo">FUKUDAI BALLOON</div>
     <p class="footer-tagline">佐賀インターナショナルバルーンフェスタへの挑戦</p>
     <p class="footer-copy">© 2026 福岡大学熱気球サークル. All rights reserved.</p>
+    <a href="admin.html" class="footer-admin-link">管理者ページ</a>
   </footer>
 
   <script src="script.js"></script>
+  <script>
+    // Load notice from localStorage
+    (function () {
+      const notice = localStorage.getItem('fdb_notice');
+      if (notice && notice.trim()) {
+        const bar  = document.getElementById('notice-bar');
+        const text = document.getElementById('notice-text');
+        text.innerHTML = notice.replace(/\n/g, '<br>');
+        bar.style.display = 'flex';
+      }
+    })();
+
+    // Load gallery from localStorage
+    (function () {
+      let items;
+      try { items = JSON.parse(localStorage.getItem('fdb_gallery') || '[]'); }
+      catch { items = []; }
+      if (items.length === 0) return;
+
+      const section = document.getElementById('gallery');
+      const grid    = document.getElementById('gallery-grid');
+      section.style.display = 'block';
+
+      grid.innerHTML = items.map(item => `
+        <div class="gallery-cell">
+          <img src="${item.url.replace(/"/g,'')}"
+               alt="${(item.caption || '').replace(/"/g,'')}"
+               loading="lazy" />
+          ${item.caption ? `<p class="gallery-caption">${item.caption.replace(/</g,'&lt;')}</p>` : ''}
+        </div>
+      `).join('');
+    })();
+  </script>
 </body>
 </html>
