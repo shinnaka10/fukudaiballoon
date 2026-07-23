@@ -548,6 +548,50 @@ a {
   object-fit: cover;
 }
 
+.balloon-photo-placeholder {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  height: 420px;
+  background: rgba(200, 168, 75, 0.04);
+  border: 1px solid rgba(200, 168, 75, 0.18);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+.balloon-photo-placeholder svg {
+  width: 80px;
+  height: 80px;
+  opacity: 0.5;
+}
+
+.balloon-photo-placeholder span {
+  font-family: var(--serif);
+  font-weight: 300;
+  font-size: 1.6rem;
+  letter-spacing: 0.3em;
+  color: rgba(200, 168, 75, 0.5);
+}
+
+.balloon-showcase {
+  margin-bottom: 96px;
+}
+
+.balloon-showcase:last-child {
+  margin-bottom: 0;
+}
+
+.balloon-showcase--reverse {
+  direction: rtl;
+}
+
+.balloon-showcase--reverse > * {
+  direction: ltr;
+}
+
 .balloon-name {
   font-family: var(--serif);
   font-weight: 300;
