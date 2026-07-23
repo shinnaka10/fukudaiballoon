@@ -715,70 +715,101 @@ a {
   background: var(--dark);
 }
 
-.sns-grid {
-  display: grid;
-  grid-template-columns: 1fr 360px;
+.sns-follow {
+  text-align: center;
+  max-width: 680px;
+  margin: 0 auto;
+}
+
+.sns-follow-text {
+  font-size: 0.92rem;
+  line-height: 2.1;
+  color: rgba(248, 245, 238, 0.7);
+  margin-bottom: 44px;
+}
+
+.sns-follow-buttons {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.sns-follow-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* ============================================================
+   Blog
+   ============================================================ */
+.blog {
+  padding: 128px 0;
+  background: var(--dark2);
+}
+
+.blog-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   gap: 64px;
-  align-items: start;
+  padding: 64px 72px;
+  border: 1px solid rgba(200, 168, 75, 0.2);
 }
 
-.sns-timeline {
-  min-height: 600px;
-  border: 1px solid rgba(200, 168, 75, 0.15);
-  overflow: hidden;
-}
-
-.sns-sidebar {
-  padding-top: 8px;
-}
-
-.sns-sidebar-label {
-  font-family: var(--sans);
-  font-weight: 400;
-  font-size: 0.7rem;
-  letter-spacing: 0.3em;
-  text-transform: uppercase;
+.blog-note-label {
+  font-family: var(--serif);
+  font-weight: 600;
+  font-size: 1rem;
+  letter-spacing: 0.2em;
   color: var(--gold);
-  margin-bottom: 20px;
+  margin-bottom: 16px;
+  text-transform: uppercase;
 }
 
-.sns-sidebar-text {
-  font-size: 0.88rem;
+.blog-desc {
+  font-size: 0.92rem;
   line-height: 2;
-  color: rgba(248, 245, 238, 0.68);
-  margin-bottom: 40px;
+  color: rgba(248, 245, 238, 0.72);
 }
 
-.sns-buttons {
+.blog-buttons {
   display: flex;
   flex-direction: column;
   gap: 14px;
+  flex-shrink: 0;
 }
 
-.sns-btn {
+.blog-btn {
   display: inline-flex;
   align-items: center;
-  gap: 12px;
-  padding: 16px 28px;
-  border: 1px solid rgba(200, 168, 75, 0.35);
-  color: rgba(248, 245, 238, 0.82);
-  font-family: var(--sans);
-  font-weight: 300;
-  font-size: 0.86rem;
-  letter-spacing: 0.05em;
-  transition: var(--transition);
-}
-
-.sns-btn:hover {
-  border-color: var(--gold);
-  color: var(--gold);
-  background: rgba(200, 168, 75, 0.06);
+  gap: 10px;
+  white-space: nowrap;
 }
 
 @media (max-width: 900px) {
-  .sns-grid {
-    grid-template-columns: 1fr;
+  .blog-inner {
+    flex-direction: column;
+    padding: 48px 32px;
     gap: 40px;
+    text-align: center;
+  }
+
+  .blog-buttons {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 600px) {
+  .blog-buttons {
+    flex-direction: column;
+  }
+
+  .blog-btn {
+    justify-content: center;
   }
 }
 
